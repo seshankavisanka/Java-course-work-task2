@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.course_work_sd2_task2.FoodieFaveQueueController">
+    <children>
+        <ImageView fitHeight="632.0" fitWidth="994.0" layoutY="76.0" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@burger.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="272.0" layoutY="28.0" text="Foodie Fave Queue Management System" textFill="#bd5c5c">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="449.0" layoutY="86.0" text="Waiting Customer Table">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+            </font>
+        </Label>
+        <TableView fx:id="WaitingCustomer" layoutX="449.0" layoutY="108.0" opacity="0.8" prefHeight="260.0" prefWidth="515.0">
+            <columns>
+                <TableColumn fx:id="NoColumn" prefWidth="68.79998397827148" text="No:" />
+                <TableColumn fx:id="firstName" prefWidth="150.0" text="First Name" />
+                <TableColumn fx:id="secondName" prefWidth="150.0" text="Second Name" />
+                <TableColumn fx:id="burgersReq" minWidth="0.0" prefWidth="142.4000244140625" text="Burgers Req:" />
+            </columns>
+        </TableView>
+        <Label layoutX="22.0" layoutY="86.0" text="Customer Details">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+            </font>
+        </Label>
+        <VBox layoutX="22.0" layoutY="108.0" prefHeight="162.0" prefWidth="394.0">
+            <children>
+                <HBox prefHeight="26.0" prefWidth="200.0">
+                    <children>
+                  <TextField fx:id="InputQueue" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="85.0" promptText="Queue name">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                        <TextField fx:id="Input" prefHeight="32.0" prefWidth="174.0" promptText="Enter Customer First Name">
+                            <HBox.margin>
+                                <Insets right="50.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <Button fx:id="SearchButton" mnemonicParsing="false" onAction="#OnClickSearch" style="-fx-background-color: #000000;" text="Search" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Black" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="30.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox opacity="0.9" prefHeight="100.0" prefWidth="310.0">
+                    <children>
+                        <VBox prefHeight="100.0" prefWidth="175.0">
+                            <children>
+                                <Label text="First Name :">
+                                    <font>
+                                        <Font name="Arial Bold" size="14.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" top="7.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <Label text="Second Name :">
+                                    <font>
+                                        <Font name="Arial Bold" size="14.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <Label layoutX="10.0" layoutY="25.0" text="No. of burgers req :">
+                                    <font>
+                                        <Font name="Arial Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="287.0" prefWidth="265.0">
+                            <children>
+                                <TextField fx:id="FirstName">
+                                    <VBox.margin>
+                                        <Insets bottom="12.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <TextField fx:id="SecondName">
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <TextField fx:id="BurgersReq" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <TextArea fx:id="ErrorArea" layoutX="22.0" layoutY="284.0" prefHeight="32.0" prefWidth="394.0" />
+      <VBox layoutX="90.0" layoutY="408.0" prefHeight="226.0" prefWidth="876.0">
+         <children>
+            <HBox prefHeight="150.0" prefWidth="876.0">
+               <children>
+                  <ImageView fx:id="Cashier11Image" fitHeight="90.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextArea fx:id="Cashier11Input" prefHeight="77.0" prefWidth="100.0" promptText="No person">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextArea>
+                  <ImageView fx:id="Cashier12Image" fitHeight="90.0" fitWidth="75.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextArea fx:id="Cashier12Input" prefHeight="200.0" prefWidth="100.0" promptText="No person" />
+               </children>
+            </HBox>
+            <HBox prefHeight="150.0" prefWidth="280.0">
+               <children>
+                  <ImageView fx:id="Cashier21Image" fitHeight="90.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextArea fx:id="Cashier21Input" prefHeight="200.0" prefWidth="100.0" promptText="No person" />
+                  <ImageView fx:id="Cashier22Image" fitHeight="90.0" fitWidth="75.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextArea fx:id="Cashier22Input" layoutX="85.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" promptText="No person" />
+                  <ImageView fx:id="Cashier23Image" fitHeight="90.0" fitWidth="75.0" layoutX="110.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextArea fx:id="Cashier23Input" layoutX="260.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" promptText="No person" />
+               </children>
+            </HBox>
+            <HBox prefHeight="72.0" prefWidth="876.0">
+               <children>
+                  <ImageView fx:id="Cashier31Image" fitHeight="90.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextArea fx:id="Cashier31Input" prefHeight="78.0" prefWidth="100.0" promptText="No person" />
+                  <ImageView fx:id="Cashier32Image" fitHeight="90.0" fitWidth="75.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextArea fx:id="Cashier32Input" layoutX="85.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" promptText="No person" />
+                  <ImageView fx:id="Cashier33Image" fitHeight="90.0" fitWidth="75.0" layoutX="110.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextArea fx:id="Cashier33Input" layoutX="260.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" promptText="No person" />
+                  <ImageView fx:id="Cashier34Image" fitHeight="90.0" fitWidth="75.0" layoutX="210.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextArea fx:id="Cashier34Input" layoutX="436.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" promptText="No person" />
+                  <ImageView fx:id="Cashier35Image" fitHeight="90.0" fitWidth="75.0" layoutX="310.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextArea fx:id="Cashier35Input" layoutX="611.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" promptText="No person" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="63.0" fitWidth="74.0" layoutX="201.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@burger-bun.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="63.0" fitWidth="74.0" layoutX="716.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@burger-bun.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="731.0" layoutY="383.0" prefHeight="150.0" prefWidth="231.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #b7903b;">
+         <children>
+            <ImageView fitHeight="63.0" fitWidth="74.0" layoutX="7.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@burger-bun.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="82.0" layoutY="36.0" text="Burger Stock">
+               <font>
+                  <Font name="Arial Black" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="BurgerStock" layoutX="92.0" layoutY="81.0" textFill="#963d3d">
+               <font>
+                  <Font name="Book Antiqua Bold" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="22.0" layoutY="378.0" text="Cashiers">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="196.0" layoutY="343.0" text="Customer Queues">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1.0" layoutY="570.0" prefHeight="55.0" prefWidth="91.0" text="Cashiers 3">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="1.0" layoutY="483.0" prefHeight="55.0" prefWidth="91.0" text="Cashiers 2">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutY="395.0" prefHeight="55.0" prefWidth="91.0" text="Cashiers 1">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="Cashier1Income" layoutY="432.0" />
+      <Label fx:id="Cashier2Income" layoutY="520.0" />
+      <Label fx:id="Cashier3Income" layoutY="607.0" />
+      <Label layoutX="23.0" layoutY="139.0" text="{Please use 1,2 or 3 queue designation or waiting only}" />
+    </children>
+</AnchorPane>
